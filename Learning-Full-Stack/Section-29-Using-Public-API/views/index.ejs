@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>Using Public API</title>
+</head>
+
+<body>
+    <% if (locals.joke && locals.delivery) { %>
+        <strong>Joke of the day <%= joke %> -> <%= delivery %> </strong>
+        <% } else { %>
+            <% if (locals.response && locals.cause && locals.moreInfo) { %>
+                <strong>
+                    <%= response %> <br> <%= cause %> <br> <%= moreInfo %>
+                </strong>
+                <% } } %>
+
+</body>
+
+</html>

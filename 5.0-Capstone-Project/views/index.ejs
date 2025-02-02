@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Raza's blog</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+	<!-- header for branding or logo -->
+
+	<%- include("partials/header.ejs") %>
+
+
+		<!-- navigation menu -->
+		<div class="navbar">
+			<%- include("partials/navbar.ejs") %>
+		</div>
+
+		<!-- the main body -->
+		<div class="main-body-container">
+			<div class="adv space">
+				<div class="adv-space">
+					<strong>This is for advertisement </strong>
+				</div>
+			</div>
+			<div class="adv contents">
+				<div class="content">
+					<strong>My First Blog</strong>
+					<p>
+						Hi My name is Raza Haider. <br>
+						I am service desk analyst at HCL
+					</p>
+				</div>
+				<div class="post-container">
+					<div class="form">
+						<h3>Create Post</h3>
+						<form action="create" method="post">
+							<label for="name">Username</label>
+							<p><input type="text" name="name" id="name"></p>
+							<label for="post">Write Post</label><br>
+							<textarea name="post" id="post" cols="30" rows="10"></textarea>
+							<p><input type="submit" value="Submit"></p>
+
+						</form>
+					</div>
+					<div class="post-view">
+						<h3>View Post</h3>
+						<form action="view" method="post">
+							<label for="name">Username</label>
+							<p><input type="text" name="name" id="name"></p>
+							<p><input type="submit" value="View"></p>
+
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+<footer>
+	<%- include("partials/footer.ejs") %>
+</footer>
+
+</html>
